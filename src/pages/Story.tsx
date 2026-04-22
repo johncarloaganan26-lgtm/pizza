@@ -2,8 +2,31 @@ import { motion } from 'motion/react';
 
 export default function Story() {
   return (
-    <div className="pt-32 pb-24 px-6" id="story-page">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen" id="story-page">
+      {/* Hero Section */}
+      <section className="h-[60vh] relative flex items-center justify-center text-center px-6">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=2000" 
+            alt="Story Hero" 
+            className="w-full h-full object-cover brightness-50"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative z-10"
+        >
+          <span className="text-brand-red uppercase tracking-editorial text-[10px] font-sans font-black mb-4 block">Our Heritage & Soul</span>
+          <h1 className="text-6xl md:text-9xl text-white font-black tracking-tighter uppercase leading-[0.8]">
+            THE <br/>
+            <span className="font-thin italic lowercase tracking-normal">Narrative.</span>
+          </h1>
+        </motion.div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-24">
         <header className="mb-24">
           <motion.h1 
             initial={{ opacity: 0, scale: 0.9 }}

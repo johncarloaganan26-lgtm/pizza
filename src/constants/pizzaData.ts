@@ -76,13 +76,13 @@ export const STORY_STAGES = [
     id: 'ingredients',
     title: 'The Earth',
     content: 'We only source from farmers we know by name. Our tomatoes grow in the volcanic soil of Vesuvius, absorbing the Mediterranean sun.',
-    image: 'https://images.unsplash.com/photo-1628191010210-a59771599553?auto=format&fit=crop&q=80&w=1200'
+    image: 'https://images.unsplash.com/photo-1592924357228-91a4eaadcfea?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 'craftsmanship',
     title: 'The Ritual',
     content: 'Every dough ball is hand-stretched, never pressed. A 48-hour cold fermentation ensures a light, airy crust that sings with flavor.',
-    image: 'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&q=80&w=1200'
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 'masterpiece',

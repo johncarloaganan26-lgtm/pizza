@@ -17,19 +17,33 @@ export default function Menu() {
   });
 
   return (
-    <div className="pt-32 pb-24 min-h-screen px-6" id="menu-page">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-16">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-8xl md:text-[12rem] leading-[0.8] mb-12 font-black tracking-tighter uppercase"
-          >
-            The <br/>
-            <span className="font-thin italic lowercase tracking-normal text-brand-red">Signatures.</span>
-          </motion.h1>
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 border-b border-brand-dark/10 pb-12">
+    <div className="min-h-screen" id="menu-page">
+      {/* Hero Section */}
+      <section className="h-[60vh] relative flex items-center justify-center text-center px-6">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&q=80&w=2000" 
+            alt="Menu Hero" 
+            className="w-full h-full object-cover brightness-50"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative z-10"
+        >
+          <span className="text-brand-red uppercase tracking-editorial text-[10px] font-sans font-black mb-4 block">The Artisano Collection</span>
+          <h1 className="text-6xl md:text-9xl text-white font-black tracking-tighter uppercase leading-[0.8]">
+            THE <br/>
+            <span className="font-thin italic lowercase tracking-normal">Signatures.</span>
+          </h1>
+        </motion.div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-24">
+        {/* Header Moved below hero */}
+        <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-8 border-b border-brand-dark/10 pb-12">
             <p className="text-brand-dark/60 text-base md:text-lg max-w-xl leading-relaxed font-sans">
               From the time-honored classics of Naples to our contemporary gourmet creations. Every pizza is a labor of love, fire, and flour.
             </p>
@@ -38,7 +52,6 @@ export default function Menu() {
               <span className="text-xl font-display italic">Vesuvio's & Co.</span>
             </div>
           </div>
-        </div>
 
         {/* Filter Bar */}
         <div className="flex flex-col md:flex-row gap-8 mb-20 items-center justify-between sticky top-20 bg-brand-cream/95 backdrop-blur-md z-40 py-6 border-b border-brand-dark/5">

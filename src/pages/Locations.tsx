@@ -16,7 +16,7 @@ const LOCATIONS = [
     address: '89 Hearth Ave, Brooklyn, NY 11201',
     hours: 'Mon-Sun: 12:00 PM - 11:00 PM',
     phone: '(718) 555-9876',
-    img: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=1000'
+    img: 'https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&q=80&w=1000'
   },
   {
     id: 3,
@@ -24,16 +24,39 @@ const LOCATIONS = [
     address: '22 Brick Lane, London E1 6RF, UK',
     hours: 'Tue-Sun: 12:00 PM - 10:00 PM',
     phone: '+44 20 7946 0123',
-    img: 'https://images.unsplash.com/photo-1550966841-39c4d8a6b521?auto=format&fit=crop&q=80&w=1000'
+    img: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&q=80&w=1000'
   }
 ];
 
 export default function Locations() {
   return (
-    <div className="pt-32 pb-24 px-6" id="locations-page">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen" id="locations-page">
+      {/* Hero Section */}
+      <section className="h-[60vh] relative flex items-center justify-center text-center px-6">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000" 
+            alt="Locations Hero" 
+            className="w-full h-full object-cover brightness-50"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative z-10"
+        >
+          <span className="text-brand-red uppercase tracking-editorial text-[10px] font-sans font-black mb-4 block">Our Culinary Sanctuaries</span>
+          <h1 className="text-6xl md:text-9xl text-white font-black tracking-tighter uppercase leading-[0.8]">
+            THE <br/>
+            <span className="font-thin italic lowercase tracking-normal">Presence.</span>
+          </h1>
+        </motion.div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-24">
         <header className="mb-24">
-          <h1 className="text-6xl md:text-8xl mb-8 leading-tight italic">Find Us</h1>
+          <h2 className="text-6xl md:text-8xl mb-8 leading-tight italic">Find Us</h2>
           <p className="text-xl text-brand-dark/70 leading-relaxed max-w-2xl font-light">
             Each Artisano location is uniquely designed to reflect the architectural heritage of its city while housing our signature wood-fired sanctuary.
           </p>

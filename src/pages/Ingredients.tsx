@@ -3,10 +3,33 @@ import { Apple, Droplets, Sun, Wind } from 'lucide-react';
 
 export default function Ingredients() {
   return (
-    <div className="pt-32 pb-24 px-6" id="ingredients-page">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen" id="ingredients-page">
+      {/* Hero Section */}
+      <section className="h-[60vh] relative flex items-center justify-center text-center px-6">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1591184015774-c6c76adbac91?auto=format&fit=crop&q=80&w=2000" 
+            alt="Ingredients Hero" 
+            className="w-full h-full object-cover brightness-50"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative z-10"
+        >
+          <span className="text-brand-red uppercase tracking-editorial text-[10px] font-sans font-black mb-4 block">Purity & Sourcing</span>
+          <h1 className="text-6xl md:text-9xl text-white font-black tracking-tighter uppercase leading-[0.8]">
+            THE <br/>
+            <span className="font-thin italic lowercase tracking-normal">Earth.</span>
+          </h1>
+        </motion.div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-24">
         <header className="mb-24 max-w-3xl">
-          <h1 className="text-6xl md:text-8xl mb-8 leading-tight italic">Born of the Earth</h1>
+          <h2 className="text-6xl md:text-8xl mb-8 leading-tight italic">Born of the Earth</h2>
           <p className="text-xl text-brand-dark/70 leading-relaxed font-light">
             We believe that 80% of the pizza happens before it even enters our kitchen. It happens in the soil, the water, and the hands of our farmers.
           </p>

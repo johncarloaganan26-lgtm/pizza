@@ -15,11 +15,34 @@ const IMAGES = [
 
 export default function Gallery() {
   return (
-    <div className="pt-32 pb-24 px-6" id="gallery-page">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen" id="gallery-page">
+      {/* Hero Section */}
+      <section className="h-[60vh] relative flex items-center justify-center text-center px-6">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2000" 
+            alt="Gallery Hero" 
+            className="w-full h-full object-cover brightness-50"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative z-10"
+        >
+          <span className="text-brand-red uppercase tracking-editorial text-[10px] font-sans font-black mb-4 block">Visual Storytelling</span>
+          <h1 className="text-6xl md:text-9xl text-white font-black tracking-tighter uppercase leading-[0.8]">
+            THE <br/>
+            <span className="font-thin italic lowercase tracking-normal">Gallery.</span>
+          </h1>
+        </motion.div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-24">
         <header className="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
           <div className="max-w-2xl">
-            <h1 className="text-6xl md:text-8xl mb-8 leading-tight italic">The Visual Journey</h1>
+            <h2 className="text-6xl md:text-8xl mb-8 leading-tight italic">The Visual Journey</h2>
             <p className="text-xl text-brand-dark/70 leading-relaxed font-light">
               Capturing the raw beauty of wood-fired craft, fresh bounty, and the joy of community dining. 
             </p>

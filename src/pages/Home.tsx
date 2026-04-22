@@ -17,7 +17,7 @@ export default function Home() {
       <section className="h-screen relative flex items-center justify-center text-center px-6">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&q=80&w=2000" 
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2000" 
             alt="Hero Pizza" 
             className="w-full h-full object-cover brightness-50"
             referrerPolicy="no-referrer"
@@ -185,7 +185,7 @@ export default function Home() {
           transition={{ duration: 10, repeat: Infinity }}
           className="absolute inset-0 opacity-10 pointer-events-none"
         >
-          <img src="https://images.unsplash.com/photo-1628191010210-a59771599553?auto=format&fit=crop&q=80&w=2000" alt="bg" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+          <img src="https://images.unsplash.com/photo-1592924357228-91a4eaadcfea?auto=format&fit=crop&q=80&w=2000" alt="bg" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         </motion.div>
         <div className="relative z-10 px-6">
           <h2 className="text-5xl md:text-7xl mb-8">Ready for a slice of <br /><span className="italic">perfection?</span></h2>
