@@ -25,7 +25,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 22,
     category: 'Specialty',
     tags: ['Spicy'],
-    image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: '3',
@@ -76,7 +76,7 @@ export const STORY_STAGES = [
     id: 'ingredients',
     title: 'The Earth',
     content: 'We only source from farmers we know by name. Our tomatoes grow in the volcanic soil of Vesuvius, absorbing the Mediterranean sun.',
-    image: 'https://images.unsplash.com/photo-1592924357228-91a4eaadcfea?auto=format&fit=crop&q=80&w=1200'
+    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 'craftsmanship',

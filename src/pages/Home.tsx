@@ -15,13 +15,21 @@ export default function Home() {
     <div ref={containerRef} className="relative overflow-hidden" id="home-page">
       {/* Hero Section */}
       <section className="h-screen relative flex items-center justify-center text-center px-6">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2000" 
-            alt="Hero Pizza" 
-            className="w-full h-full object-cover brightness-50"
-            referrerPolicy="no-referrer"
-          />
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover scale-[1.05]"
+            poster="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2000"
+          >
+            <source src="https://player.vimeo.com/external/370331327.sd.mp4?s=d0046648E8fd14436A188F3A2290B55EB593F4D4&profile_id=139&oauth2_token_id=57447761" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Enhanced Dark Overlay */}
+          <div className="absolute inset-0 bg-zinc-950/60 mix-blend-multiply transition-opacity duration-1000" />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/30" />
         </div>
         
         <motion.div 
@@ -185,7 +193,7 @@ export default function Home() {
           transition={{ duration: 10, repeat: Infinity }}
           className="absolute inset-0 opacity-10 pointer-events-none"
         >
-          <img src="https://images.unsplash.com/photo-1592924357228-91a4eaadcfea?auto=format&fit=crop&q=80&w=2000" alt="bg" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+          <img src="https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?auto=format&fit=crop&q=80&w=2000" alt="bg" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         </motion.div>
         <div className="relative z-10 px-6">
           <h2 className="text-5xl md:text-7xl mb-8">Ready for a slice of <br /><span className="italic">perfection?</span></h2>
