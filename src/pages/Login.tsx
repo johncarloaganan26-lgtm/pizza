@@ -24,7 +24,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-brand-cream pt-24 md:pt-0" id="login-page">
+    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-brand-cream" id="login-page">
       {/* Left Pane - Visual */}
       <div className="hidden md:block relative overflow-hidden">
         <img 
@@ -47,14 +47,14 @@ export default function Login() {
       </div>
 
       {/* Right Pane - Form */}
-      <div className="flex flex-col justify-center p-10 md:p-24 bg-brand-cream">
+      <div className="flex flex-col justify-center p-10 md:p-24 pt-32 pb-20 md:py-12 bg-brand-cream relative min-h-screen">
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-md w-full mx-auto"
         >
-          <div className="mb-16">
+          <div className="mb-12">
             <span className="text-brand-red text-[10px] uppercase tracking-editorial font-black mb-4 block">Welcome to Artisano</span>
             <h1 className="text-5xl font-black uppercase tracking-tighter leading-none mb-4">Account <br /><span className="font-thin italic lowercase tracking-normal">login.</span></h1>
             <p className="text-brand-dark/50 text-sm font-sans">Please enter your credentials to re-enter the world of flour and fire.</p>
@@ -93,7 +93,7 @@ export default function Login() {
                 <input type="checkbox" className="w-4 h-4 rounded-sm border-brand-dark/20 accent-brand-red" />
                 <span className="text-[10px] font-black uppercase tracking-widest text-brand-dark/60 group-hover:text-brand-dark transition-colors">Remember me</span>
               </label>
-              <Link to="#" className="text-[10px] font-black uppercase tracking-widest text-brand-red hover:text-brand-dark transition-colors">Forgot Password?</Link>
+              <Link to="/forgot-password" id="forgot-password-link" className="text-[10px] font-black uppercase tracking-widest text-brand-red hover:text-brand-dark transition-colors">Forgot Password?</Link>
             </div>
 
             <button 
@@ -105,7 +105,7 @@ export default function Login() {
 
             <div className="pt-12 text-center">
               <p className="text-xs text-brand-dark/40 font-sans">
-                Not a member yet? <Link to="#" className="text-brand-red font-black uppercase tracking-widest ml-2 hover:underline">Join the society →</Link>
+                Not a member yet? <Link to="/register" id="join-society-link" className="text-brand-red font-black uppercase tracking-widest ml-2 hover:underline">Join the society →</Link>
               </p>
             </div>
           </form>

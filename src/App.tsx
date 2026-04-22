@@ -16,6 +16,8 @@ import Locations from './pages/Locations';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import ForgotPassword from './pages/ForgotPassword';
+import Register from './pages/Register';
 import AdminLayout from './pages/admin/AdminLayout';
 import DashboardOverview from './pages/admin/DashboardOverview';
 import MenuManager from './pages/admin/MenuManager';
@@ -60,6 +62,8 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/story" element={<Story />} />
                 <Route path="/ingredients" element={<Ingredients />} />

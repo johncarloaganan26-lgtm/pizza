@@ -23,8 +23,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isLoginPage = location.pathname === '/login';
-  const showDarkNavbar = isScrolled || isLoginPage;
+  const isAuthPage = ['/login', '/register', '/forgot-password'].includes(location.pathname);
+  const showDarkNavbar = isScrolled || isAuthPage;
 
   return (
     <nav 

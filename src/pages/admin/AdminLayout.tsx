@@ -128,9 +128,9 @@ export default function AdminLayout() {
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <div className={`min-h-screen flex font-helvetica transition-colors ${isDarkMode ? 'bg-zinc-950 text-white' : 'bg-white text-brand-dark'}`} id="admin-layout">
+    <div className={`min-h-screen flex font-helvetica transition-colors ${isDarkMode ? 'bg-zinc-950 text-white' : 'bg-brand-cream text-brand-dark'}`} id="admin-layout">
       {/* Sidebar Content */}
-      <aside className={`transition-all duration-300 bg-[#4A1612] text-white flex flex-col border-r border-white/5 sticky top-0 h-screen shadow-2xl ${isCollapsed ? 'w-20' : 'w-72'}`}>
+      <aside className={`transition-all duration-300 bg-brand-red text-white flex flex-col border-r border-white/5 sticky top-0 h-screen shadow-2xl ${isCollapsed ? 'w-20' : 'w-72'}`}>
         <div className={`p-10 transition-opacity mb-4 ${isCollapsed ? 'opacity-0 h-0 p-0 overflow-hidden' : 'opacity-100'}`}>
           <Link to="/" className="flex flex-col group text-white">
             <span className="text-[8px] uppercase tracking-editorial font-black text-white/40">Artisano</span>
@@ -141,10 +141,9 @@ export default function AdminLayout() {
         </div>
 
         <nav className="flex-1 px-4 space-y-2 overflow-y-auto no-scrollbar">
-          {!isCollapsed && <div className="text-[10px] uppercase font-black tracking-widest text-white/20 mb-6 pl-4 font-helvetica">Operations</div>}
+          {!isCollapsed && <div className="text-[10px] uppercase font-black tracking-widest text-white/40 mb-6 pl-4 font-helvetica">Operations</div>}
           {ADMIN_LINKS.map((link) => {
             const isActive = location.pathname === link.path || (link.path !== '/admin' && location.pathname.startsWith(link.path));
-            const sidebarRed = '#CD412F';
             return (
               <Link
                 key={link.path}
@@ -152,11 +151,11 @@ export default function AdminLayout() {
                 title={isCollapsed ? link.name : ''}
                 className={`flex items-center gap-4 px-4 py-4 rounded-sm transition-all group ${
                   isActive 
-                  ? 'bg-white text-[#4A1612] shadow-lg translate-x-2' 
+                  ? 'bg-white text-brand-red shadow-lg translate-x-2' 
                   : 'text-white hover:bg-white/10'
                 }`}
               >
-                <link.icon className={`w-4 h-4 ${isActive ? 'text-[#4A1612]' : 'text-white group-hover:scale-110 transition-transform'}`} />
+                <link.icon className={`w-4 h-4 ${isActive ? 'text-brand-red' : 'text-white group-hover:scale-110 transition-transform'}`} />
                 {!isCollapsed && <span className="text-[10px] font-black uppercase tracking-widest">{link.name}</span>}
               </Link>
             );

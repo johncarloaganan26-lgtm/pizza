@@ -6,15 +6,15 @@ export default function SocietyManager() {
     <div id="society-manager">
       <header className="mb-16">
         <span className="text-[10px] uppercase tracking-editorial font-black text-brand-red mb-4 block">Society List</span>
-        <h1 className="text-4xl font-black tracking-tighter uppercase leading-none text-brand-dark dark:text-white">
+        <h1 className="text-4xl font-black tracking-tighter uppercase leading-none text-brand-dark dark:text-zinc-100">
           Our <br />
-          <span className="font-thin italic lowercase tracking-normal text-zinc-400">Customers.</span>
+          <span className="font-thin italic lowercase tracking-normal text-zinc-400 dark:text-zinc-500">Customers.</span>
         </h1>
       </header>
 
       <div className="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/5 rounded-sm overflow-hidden shadow-sm">
-        <div className="p-8 border-b border-zinc-100 dark:border-white/5 flex justify-between items-center bg-zinc-50/50 dark:bg-zinc-800">
-          <h3 className="text-[10px] uppercase tracking-widest font-black text-brand-dark dark:text-white">User Registry</h3>
+        <div className="p-8 border-b border-zinc-100 dark:border-white/5 flex justify-between items-center bg-zinc-50/50 dark:bg-zinc-800/50">
+          <h3 className="text-[10px] uppercase tracking-widest font-black text-brand-dark dark:text-zinc-200">User Registry</h3>
           <input 
             type="text" 
             placeholder="Search registry..." 
@@ -33,28 +33,28 @@ export default function SocietyManager() {
                   <span className="text-[8px] font-black uppercase tracking-tighter">VIP</span>
                 </div>
               </div>
-              <h4 className="text-2xl font-black uppercase tracking-tighter mb-1 text-brand-dark dark:text-white">Enzo Ferrari</h4>
-              <p className="text-[10px] text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-8 border-b border-zinc-100 dark:border-white/5 pb-4">ID No. 891{i} — Since Nov 2023</p>
+              <h4 className="text-2xl font-black uppercase tracking-tighter mb-1 text-brand-dark dark:text-zinc-100">Enzo Ferrari</h4>
+              <p className="text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-8 border-b border-zinc-100 dark:border-white/5 pb-4">ID No. 891{i} — Since Nov 2023</p>
               
               <div className="space-y-4 mb-10">
                 <div className="flex items-center gap-3 text-zinc-400 dark:text-zinc-500">
-                  <Mail className="w-3 h-3 text-zinc-300 dark:text-zinc-600" />
-                  <span className="text-[10px] font-medium font-sans">enzo.fer@maranello.it</span>
+                  <Mail className="w-3 h-3 text-zinc-300 dark:text-zinc-700" />
+                  <span className="text-[10px] font-medium font-sans group-hover:text-brand-red transition-colors dark:text-zinc-400">enzo.fer@maranello.it</span>
                 </div>
                 <div className="flex items-center gap-3 text-zinc-400 dark:text-zinc-500">
-                  <Calendar className="w-3 h-3 text-zinc-300 dark:text-zinc-600" />
-                  <span className="text-[10px] font-medium font-sans">Last Order: Oct 24, 12:30 PM</span>
+                  <Calendar className="w-3 h-3 text-zinc-300 dark:text-zinc-700" />
+                  <span className="text-[10px] font-medium font-sans dark:text-zinc-400">Last Order: Oct 24, 12:30 PM</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-sm border border-zinc-100 dark:border-white/5">
-                  <p className="text-[8px] uppercase tracking-widest font-black text-zinc-400 dark:text-zinc-500 mb-1">Lifetime Value</p>
-                  <p className="text-sm font-black text-brand-dark dark:text-white">$2,840.00</p>
+                <div className="p-4 bg-zinc-50 dark:bg-zinc-800/30 rounded-sm border border-zinc-100 dark:border-white/5">
+                  <p className="text-[8px] uppercase tracking-widest font-black text-zinc-400 dark:text-zinc-600 mb-1">Lifetime Value</p>
+                  <p className="text-sm font-black text-brand-dark dark:text-zinc-200">$2,840.00</p>
                 </div>
-                <div className="p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-sm border border-zinc-100 dark:border-white/5">
-                  <p className="text-[8px] uppercase tracking-widest font-black text-zinc-400 dark:text-zinc-500 mb-1">Total Orders</p>
-                  <p className="text-sm font-black text-brand-dark dark:text-white">104</p>
+                <div className="p-4 bg-zinc-50 dark:bg-zinc-800/30 rounded-sm border border-zinc-100 dark:border-white/5">
+                  <p className="text-[8px] uppercase tracking-widest font-black text-zinc-400 dark:text-zinc-600 mb-1">Total Orders</p>
+                  <p className="text-sm font-black text-brand-dark dark:text-zinc-200">104</p>
                 </div>
               </div>
             </div>

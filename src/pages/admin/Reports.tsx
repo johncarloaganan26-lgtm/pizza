@@ -18,9 +18,9 @@ export default function Reports() {
       <header className="flex justify-between items-end">
         <div>
           <span className="text-[10px] uppercase tracking-editorial font-black text-brand-red mb-4 block">Business Intelligence</span>
-          <h1 className="text-4xl font-black tracking-tighter uppercase leading-none text-brand-dark dark:text-white">
+          <h1 className="text-4xl font-black tracking-tighter uppercase leading-none text-brand-dark dark:text-zinc-100">
             Performance <br />
-            <span className="font-thin italic lowercase tracking-normal text-zinc-400">Reports.</span>
+            <span className="font-thin italic lowercase tracking-normal text-zinc-400 dark:text-zinc-500">Reports.</span>
           </h1>
         </div>
         <div className="flex gap-4">
@@ -41,33 +41,33 @@ export default function Reports() {
         ].map((stat, i) => (
           <div key={i} className="bg-white dark:bg-zinc-900 p-8 border border-zinc-100 dark:border-white/5 rounded-sm shadow-sm group hover:border-brand-red transition-colors">
              <stat.icon className="w-5 h-5 text-brand-red mb-4" />
-             <p className="text-[10px] font-black uppercase text-zinc-400 dark:text-zinc-500 tracking-widest mb-1">{stat.label}</p>
-             <p className="text-3xl font-black text-brand-dark dark:text-white tracking-tighter">{stat.value}</p>
+             <p className="text-[10px] font-black uppercase text-zinc-400 dark:text-zinc-600 tracking-widest mb-1">{stat.label}</p>
+             <p className="text-3xl font-black text-brand-dark dark:text-zinc-100 tracking-tighter">{stat.value}</p>
           </div>
         ))}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-white dark:bg-zinc-900 p-10 border border-zinc-100 dark:border-white/5 rounded-sm shadow-sm h-[400px]">
-          <h3 className="text-[10px] uppercase font-black text-brand-dark dark:text-white tracking-widest mb-10">Sales Velocity</h3>
+        <div className="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/5 rounded-sm shadow-sm h-[400px] p-10">
+          <h3 className="text-[10px] uppercase font-black text-brand-dark dark:text-zinc-200 tracking-widest mb-10">Sales Velocity</h3>
           <ResponsiveContainer width="100%" height="80%">
             <BarChart data={DATA}>
-              <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#888', fontWeight: 900 }} />
-              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#888', fontWeight: 900 }} />
-              <Tooltip cursor={{ fill: 'rgba(205, 65, 47, 0.05)' }} contentStyle={{ backgroundColor: '#111', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '10px', fontWeight: 900, textTransform: 'uppercase' }} />
+              <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#666', fontWeight: 900 }} />
+              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#666', fontWeight: 900 }} />
+              <Tooltip cursor={{ fill: 'rgba(205, 65, 47, 0.05)' }} contentStyle={{ backgroundColor: '#111', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '10px', fontWeight: 900, textTransform: 'uppercase', borderRadius: '0px' }} />
               <Bar dataKey="sales" fill="#CD412F" radius={[2, 2, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
 
-        <div className="bg-white dark:bg-zinc-900 p-10 border border-zinc-100 dark:border-white/5 rounded-sm shadow-sm h-[400px]">
-          <h3 className="text-[10px] uppercase font-black text-brand-dark dark:text-white tracking-widest mb-10">Revenue Stream</h3>
+        <div className="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/5 rounded-sm shadow-sm h-[400px] p-10">
+          <h3 className="text-[10px] uppercase font-black text-brand-dark dark:text-zinc-200 tracking-widest mb-10">Revenue Stream</h3>
           <ResponsiveContainer width="100%" height="80%">
             <AreaChart data={DATA}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} strokeOpacity={0.1} />
-              <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#888', fontWeight: 900 }} />
-              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#888', fontWeight: 900 }} />
-              <Tooltip contentStyle={{ backgroundColor: '#111', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '10px', fontWeight: 900, textTransform: 'uppercase' }} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#888" strokeOpacity={0.1} />
+              <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#666', fontWeight: 900 }} />
+              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#666', fontWeight: 900 }} />
+              <Tooltip contentStyle={{ backgroundColor: '#111', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '10px', fontWeight: 900, textTransform: 'uppercase', borderRadius: '0px' }} />
               <Area type="monotone" dataKey="revenue" stroke="#CD412F" fill="#CD412F" fillOpacity={0.1} />
             </AreaChart>
           </ResponsiveContainer>

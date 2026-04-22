@@ -84,7 +84,7 @@ export default function MenuManager() {
                       <button className="p-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white hover:bg-brand-red hover:text-white rounded-sm transition-all" title="Edit">
                         <Edit2 className="w-4 h-4" />
                       </button>
-                      <button className="p-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white hover:bg-red-600 hover:text-white rounded-sm transition-all" title="Delete">
+                      <button className="p-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white hover:bg-brand-red hover:text-white rounded-sm transition-all" title="Delete">
                         <Trash2 className="w-4 h-4" />
                       </button>
                     </div>
@@ -135,28 +135,28 @@ export default function MenuManager() {
                   </div>
                   <div className="flex-1 space-y-6">
                     <div className="space-y-2">
-                       <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500">Item Name</label>
+                       <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Item Name</label>
                        <input 
                          type="text" 
                          placeholder="e.g. VESUVIAN STRIKE" 
-                         className="w-full bg-zinc-50 dark:bg-zinc-800 border-b border-zinc-200 dark:border-white/10 p-3 text-sm font-black focus:outline-none focus:border-brand-red dark:text-white placeholder:text-zinc-300"
+                         className="w-full bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-white/10 p-3 text-sm font-black focus:outline-none focus:border-brand-red dark:text-white placeholder:text-zinc-300 dark:placeholder:text-zinc-700 transition-colors"
                        />
                     </div>
                     <div className="grid grid-cols-2 gap-6">
                       <div className="space-y-2">
-                         <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500">Category</label>
-                         <select className="w-full bg-zinc-50 dark:bg-zinc-800 border-b border-zinc-200 dark:border-white/10 p-3 text-[10px] font-black uppercase tracking-widest focus:outline-none focus:border-brand-red dark:text-white">
-                           <option>Classic</option>
-                           <option>Gourmet</option>
-                           <option>Specialty</option>
+                         <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Category</label>
+                         <select className="w-full bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-white/10 p-3 text-[10px] font-black uppercase tracking-widest focus:outline-none focus:border-brand-red dark:text-white transition-colors">
+                           <option className="dark:bg-zinc-900">Classic</option>
+                           <option className="dark:bg-zinc-900">Gourmet</option>
+                           <option className="dark:bg-zinc-900">Specialty</option>
                          </select>
                       </div>
                       <div className="space-y-2">
-                         <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500">Price (USD)</label>
+                         <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Price (USD)</label>
                          <input 
                            type="number" 
                            placeholder="0.00" 
-                           className="w-full bg-zinc-50 dark:bg-zinc-800 border-b border-zinc-200 dark:border-white/10 p-3 text-sm font-black focus:outline-none focus:border-brand-red dark:text-white placeholder:text-zinc-300"
+                           className="w-full bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-white/10 p-3 text-sm font-black focus:outline-none focus:border-brand-red dark:text-white placeholder:text-zinc-300 dark:placeholder:text-zinc-700 transition-colors"
                          />
                       </div>
                     </div>
@@ -164,11 +164,11 @@ export default function MenuManager() {
                 </div>
 
                 <div className="space-y-2">
-                   <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500">Description</label>
+                   <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Description</label>
                    <textarea 
                      rows={3} 
                      placeholder="Dough, San Marzano, Mozzarella..."
-                     className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 p-4 text-sm font-sans focus:outline-none focus:border-brand-red dark:text-white resize-none"
+                     className="w-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-white/10 p-4 text-sm font-sans focus:outline-none focus:border-brand-red dark:text-white resize-none dark:placeholder:text-zinc-700 transition-colors"
                    />
                 </div>
 

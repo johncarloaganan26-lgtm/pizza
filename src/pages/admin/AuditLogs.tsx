@@ -15,9 +15,9 @@ export default function AuditLogs() {
     <div id="admin-audit-logs" className="space-y-12">
       <header>
         <span className="text-[10px] uppercase tracking-editorial font-black text-brand-red mb-4 block">Security & Traceability</span>
-        <h1 className="text-4xl font-black tracking-tighter uppercase leading-none text-brand-dark dark:text-white">
+        <h1 className="text-4xl font-black tracking-tighter uppercase leading-none text-brand-dark dark:text-zinc-100">
           Audit <br />
-          <span className="font-thin italic lowercase tracking-normal text-zinc-400">Logs.</span>
+          <span className="font-thin italic lowercase tracking-normal text-zinc-400 dark:text-zinc-500">Logs.</span>
         </h1>
       </header>
 
@@ -45,12 +45,12 @@ export default function AuditLogs() {
                     {i === 1 ? <AlertCircle className="w-5 h-5" /> : <ShieldCheck className="w-5 h-5" />}
                  </div>
                  <div>
-                   <p className="text-sm font-black uppercase tracking-tight text-brand-dark dark:text-white mb-1 group-hover:text-brand-red transition-colors">{log.action}</p>
+                   <p className="text-sm font-black uppercase tracking-tight text-brand-dark dark:text-zinc-200 mb-1 group-hover:text-brand-red transition-colors">{log.action}</p>
                    <div className="flex items-center gap-4">
-                     <span className="text-[10px] text-zinc-400 dark:text-zinc-500 font-black uppercase tracking-widest flex items-center gap-2">
+                     <span className="text-[10px] text-zinc-400 dark:text-zinc-600 font-black uppercase tracking-widest flex items-center gap-2">
                        <UserCheck className="w-3 h-3" /> {log.user}
                      </span>
-                     <span className="text-[10px] text-zinc-300 dark:text-zinc-600 font-black uppercase tracking-widest">• {log.time}</span>
+                     <span className="text-[10px] text-zinc-300 dark:text-zinc-700 font-black uppercase tracking-widest">• {log.time}</span>
                    </div>
                  </div>
               </div>
