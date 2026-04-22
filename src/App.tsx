@@ -22,6 +22,9 @@ import MenuManager from './pages/admin/MenuManager';
 import OrdersManager from './pages/admin/OrdersManager';
 import SocietyManager from './pages/admin/SocietyManager';
 import AdminSettings from './pages/admin/AdminSettings';
+import Archive from './pages/admin/Archive';
+import Reports from './pages/admin/Reports';
+import AuditLogs from './pages/admin/AuditLogs';
 
 function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -45,6 +48,9 @@ export default function App() {
             <Route path="menu" element={<MenuManager />} />
             <Route path="orders" element={<OrdersManager />} />
             <Route path="customers" element={<SocietyManager />} />
+            <Route path="archive" element={<Archive />} />
+            <Route path="reports" element={<Reports />} />
+            <Route path="logs" element={<AuditLogs />} />
             <Route path="settings" element={<AdminSettings />} />
           </Route>
 
